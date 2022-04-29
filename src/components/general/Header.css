@@ -1,0 +1,86 @@
+#header {
+  font-family: "League Gothic", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  /* color: #e9ecef; */
+  color: #00afb9;
+}
+
+#header .header_left {
+  align-items: center;
+  display: flex;
+}
+
+#header .header_left img {
+  width: 50px;
+}
+
+#header .nav {
+  display: flex;
+  align-items: center;
+}
+
+#header .nav ul {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+#header .nav ul a {
+  text-decoration: none;
+  /* color: black; */
+  color: #e9ecef;
+  font-size: 20px;
+  transition: all 0.7s ease;
+}
+
+#header .nav ul a:hover {
+  color: #00afb9;
+}
+
+#header .nav .hamburgher {
+  cursor: pointer;
+  margin: auto 30px;
+  display: none;
+}
+
+#header .nav .hamburgher span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+}
+
+#header .nav .hamburgher.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#header .nav .hamburgher.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#header .nav .hamburgher.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 725px) {
+  #header .nav .hamburgher {
+    display: block;
+  }
+
+  #header .nav ul {
+    position: fixed;
+    top: 80px;
+    left: -110%;
+    flex-direction: column;
+    background-color: aquamarine;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  #header .nav.active ul {
+    left: 0;
+  }
+}
